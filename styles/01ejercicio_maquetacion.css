@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container1 {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 1vw;
+}
+
+.grid-item1 {
+    border: 1px solid black;
+}
+
+.container2 div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1vw;
+
+}
+
+.grid-item2 {
+    border: 1px solid black;
+}

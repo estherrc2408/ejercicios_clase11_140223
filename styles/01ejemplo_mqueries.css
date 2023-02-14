@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*definicion de variables*/
+/**colores**/
+:root {
+    --dark:black;
+    --medium: gray;
+    --light: white;
+/**tipografia**/
+    --font:'Roboto', sans-serif;
+    --bold: 700;
+    --regular: 400;
+    --thin: 100;
+
+/**medidas**/
+
+    --gap: 20px;
+}
+
+body,html{
+    font-family: var(--font);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: var(--bold);
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid var(--dark);
+}
+
+.bg-dark {
+    background-color: black;
+    color: var(--light); 
+}
+
+main > div {
+    margin: 20px 0;
+}
+
+.gridContainer {
+    display: grid;
+    gap: 20px;
+}
+
+.gridContainer > *{
+    padding: 50px;
+    border: 1px solid gray;
+}
+
+/*******
+768 px
+*********/
+@media screen and (min-width:768px){
+    .container {
+        width: 90%;
+        /*margin: 0 auto; queda igual que en dimension normal asi que na¡o hace falta la especificacion*/
+    }
+
+    .bg-dark {
+        background-color: teal;
+    }
+
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+/*******
+992 px
+*********/
+@media screen and (min-width:992px){
+    .container {
+        width: 80%;
+       /* margin: 0 auto; queda igual asi que no hace falta la especificacion*/
+    }
+    
+    .bg-dark {
+        background-color: green;
+    }
+
+    .gridContainer .tres {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .gridContainer .cuatro {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+/*******
+1200 px
+*********/
+@media screen and (min-width:1200px){
+    .container {
+        max-width: 1300px;
+        /*margin: 0 auto; queda igual asi que no hace falta la especificacion*/
+    }
+    
+    .bg-dark {
+        background-color: greenyellow;
+        color: white; 
+    }  
+}
